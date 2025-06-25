@@ -1,0 +1,20 @@
+{
+  "name": "redisdemo",
+  "version": "1.0.0",
+  "description": "Redis demo project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "infra": "docker-compose up --build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shivik0505/Redis_demo.git"
+  },
+  "author": "Shivam Vikhar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "redis": "^5.5.6"
+  }
+}
