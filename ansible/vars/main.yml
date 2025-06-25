@@ -1,0 +1,4 @@
+---
+# vars file for redis
+redis_bind_address: 127.0.0.1
+redis_port: 6379
