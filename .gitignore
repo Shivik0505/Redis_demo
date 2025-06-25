@@ -1,1 +1,15 @@
-*.pem
+# macOS
+.DS_Store
+
+# Node
+node_modules/
+package-lock.json
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Logs
+npm-debug.log
+
