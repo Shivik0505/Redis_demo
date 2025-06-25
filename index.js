@@ -2,7 +2,7 @@ const express = require("express");
 const redis = require("redis");
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000; // ✅ important for Render
 
 const client = redis.createClient({
   url: `redis://${process.env.REDIS_HOST || "localhost"}:${process.env.REDIS_PORT || 6379}`,
@@ -21,6 +21,6 @@ app.get("/", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`🚀 Server running on http://localhost:${port}`);
+  console.log(`🚀 Server running on port ${port}`);
 });
 
