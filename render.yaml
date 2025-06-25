@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: redisdemo-web
+    env: docker
+    repo: https://github.com/Shivik0505/Redis_demo
+    branch: main
+    dockerfilePath: Dockerfile
+    buildCommand: ""
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeploy: true
+
