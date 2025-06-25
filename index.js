@@ -1,5 +1,6 @@
 const express = require("express");
 const redis = require("redis");
+
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -11,6 +12,7 @@ client.on("error", (err) => console.error("Redis Client Error", err));
 
 (async () => {
   await client.connect();
+  await client.set("demo_key", "Redis working!");
 })();
 
 app.get("/", async (req, res) => {
@@ -19,6 +21,6 @@ app.get("/", async (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`🚀 Server running at http://localhost:${port}`);
+  console.log(`🚀 Server running on http://localhost:${port}`);
 });
 
